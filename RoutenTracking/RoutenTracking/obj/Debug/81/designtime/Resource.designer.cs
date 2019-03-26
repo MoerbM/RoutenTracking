@@ -2654,6 +2654,9 @@ namespace RoutenTracking
 			// aapt resource value: 0x7F0C0074
 			public const int status_bar_latest_event_content = 2131492980;
 			
+			// aapt resource value: 0x7F010003
+			public const int StopButton = 2130771971;
+			
 			// aapt resource value: 0x7F0C0075
 			public const int submenuarrow = 2131492981;
 			
@@ -2677,6 +2680,12 @@ namespace RoutenTracking
 			
 			// aapt resource value: 0x7F0C007F
 			public const int textinput_error = 2131492991;
+			
+			// aapt resource value: 0x7F010005
+			public const int textLatitude = 2130771973;
+			
+			// aapt resource value: 0x7F010004
+			public const int textLongitude = 2130771972;
 			
 			// aapt resource value: 0x7F0C007B
 			public const int textSpacerNoButtons = 2131492987;

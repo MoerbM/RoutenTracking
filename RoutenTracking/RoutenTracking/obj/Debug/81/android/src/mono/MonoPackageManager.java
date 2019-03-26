@@ -107,6 +107,9 @@ class MonoPackageManager_Resources {
 	public static final String[] Assemblies = new String[]{
 		/* We need to ensure that "RoutenTracking.dll" comes first in this list. */
 		"RoutenTracking.dll",
+		"Plugin.CurrentActivity.dll",
+		"Plugin.Geolocator.dll",
+		"Plugin.Permissions.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",
 		"Xamarin.Android.Arch.Lifecycle.Common.dll",
 		"Xamarin.Android.Arch.Lifecycle.Runtime.dll",

@@ -2,6 +2,9 @@ C:\Users\Maximilian\source\repos\RoutenTracking\RoutenTracking\obj\Debug\81\andr
 C:\Users\Maximilian\source\repos\RoutenTracking\RoutenTracking\obj\Debug\81\android\assets\Java.Interop.dll
 C:\Users\Maximilian\source\repos\RoutenTracking\RoutenTracking\obj\Debug\81\android\assets\Mono.Android.dll
 C:\Users\Maximilian\source\repos\RoutenTracking\RoutenTracking\obj\Debug\81\android\assets\mscorlib.dll
+C:\Users\Maximilian\source\repos\RoutenTracking\RoutenTracking\obj\Debug\81\android\assets\Plugin.CurrentActivity.dll
+C:\Users\Maximilian\source\repos\RoutenTracking\RoutenTracking\obj\Debug\81\android\assets\Plugin.Geolocator.dll
+C:\Users\Maximilian\source\repos\RoutenTracking\RoutenTracking\obj\Debug\81\android\assets\Plugin.Permissions.dll
 C:\Users\Maximilian\source\repos\RoutenTracking\RoutenTracking\obj\Debug\81\android\assets\System.Core.dll
 C:\Users\Maximilian\source\repos\RoutenTracking\RoutenTracking\obj\Debug\81\android\assets\System.dll
 C:\Users\Maximilian\source\repos\RoutenTracking\RoutenTracking\obj\Debug\81\android\assets\System.Xml.dll
