@@ -14,16 +14,17 @@ namespace RoutenTracking
 {
     class Koordinaten
     {
-        static int Zähler;
-        int Reihenfolge;
+        DateTimeOffset Erstelldatum;
         double Längengrad;
         double Breitengrad;
+        
 
         public Koordinaten(double _Breitengrad, double _Längengrad)
         {
             
             Längengrad = _Längengrad;
             Breitengrad = _Breitengrad;
+            Erstelldatum = DateTimeOffset.UtcNow;
         }
 
     }

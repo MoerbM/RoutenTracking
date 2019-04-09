@@ -21,41 +21,40 @@ namespace RoutenTracking
         string Titel;
         DateTime Datum;
         List<Koordinaten> KoordinatenListe;
-
         public Route()
         {
             this.Datum = DateTime.Now;
             KoordinatenListe = new List<Koordinaten>();
-            GetLocationAsync.
+            
         }
 
-        
 
 
-        private async Task<Position> GetLocationAsync()
+        private async void GetLocationAsync()
         {
-            Position position = null;
+
             try
             {
                 var locator = CrossGeolocator.Current;
                 locator.DesiredAccuracy = 100;
 
+                Position position;
                 position = await locator.GetLastKnownLocationAsync();
 
                 if (position != null)
                 {
                     //got a cahched position, so let's use it.
-                    return position;
+
                 }
 
                 if (!locator.IsGeolocationAvailable || !locator.IsGeolocationEnabled)
                 {
                     //not available or enabled
-                    return null;
+
                 }
-
+                
                 position = await locator.GetPositionAsync(TimeSpan.FromSeconds(20), null, true);
-
+                KoordinatenListe.Add(new Koordinaten(position.Latitude, position.Longitude));
             }
             catch (Exception ex)
             {
@@ -63,14 +62,47 @@ namespace RoutenTracking
 
             }
 
-            if (position == null)
-                return null;
-
-            return position;
         }
-        
-          
-        
+
+        async void StartListening()
+        {
+            if (CrossGeolocator.Current.IsListening)
+                return;
+
+            await CrossGeolocator.Current.StartListeningAsync(TimeSpan.FromSeconds(10), 10, true);
+
+            CrossGeolocator.Current.PositionChanged += PositionChanged;
+            CrossGeolocator.Current.PositionError += PositionError;
+        }
+
+        private void PositionChanged(object sender, PositionEventArgs e)
+        {
+
+            //If updating the UI, ensure you invoke on main thread
+            var position = e.Position;
+            KoordinatenListe.Add(new Koordinaten(position.Latitude, position.Longitude));
+
+        }
+
+        private void PositionError(object sender, PositionErrorEventArgs e)
+        {
+            
+            //Handle event here for errors
+        }
+
+        async void StopListening()
+        {
+            if (!CrossGeolocator.Current.IsListening)
+                return;
+
+            await CrossGeolocator.Current.StopListeningAsync();
+
+            CrossGeolocator.Current.PositionChanged -= PositionChanged;
+            CrossGeolocator.Current.PositionError -= PositionError;
+        }
+
+
+
 
 
 
@@ -84,6 +116,6 @@ namespace RoutenTracking
 
 
 
-        
 
+    }
 }

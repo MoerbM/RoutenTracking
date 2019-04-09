@@ -20,7 +20,7 @@ namespace RoutenTracking
     public class TrackingActivity : Activity
     {
 
-        protected override async void OnCreate(Bundle savedInstanceState)
+        protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_tracking);
@@ -32,16 +32,8 @@ namespace RoutenTracking
             StopButton.Click += StopBtn_Click;
 
             Route Strecke = new Route();
-
-            Task task = new Task(() =>
-            {
-                while (true)
-                {
-                    Strecke.G();
-                    Thread.Sleep(1000);
-                }
-            });
-            task.Start();
+            Strecke.
+           
 
         }
 

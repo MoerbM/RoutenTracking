@@ -589,11 +589,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Maximilian\\source\\repos\\RoutenTracking\\RoutenTracking\\RoutenTracking.csproj",
+      "projectUniqueName": "C:\\Users\\Maximilian\\Documents\\GitHub\\RoutenTracking\\RoutenTracking\\RoutenTracking\\RoutenTracking.csproj",
       "projectName": "RoutenTracking",
-      "projectPath": "C:\\Users\\Maximilian\\source\\repos\\RoutenTracking\\RoutenTracking\\RoutenTracking.csproj",
+      "projectPath": "C:\\Users\\Maximilian\\Documents\\GitHub\\RoutenTracking\\RoutenTracking\\RoutenTracking\\RoutenTracking.csproj",
       "packagesPath": "C:\\Users\\Maximilian\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Maximilian\\source\\repos\\RoutenTracking\\RoutenTracking\\obj\\",
+      "outputPath": "C:\\Users\\Maximilian\\Documents\\GitHub\\RoutenTracking\\RoutenTracking\\RoutenTracking\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
